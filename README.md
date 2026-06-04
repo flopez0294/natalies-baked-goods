@@ -1,6 +1,6 @@
 <div align="center">
 
-#  Bakery Website
+#  Natalie's Baked Goods
 
 A modern website for a personal bakery showcasing fresh baked goods.
 
