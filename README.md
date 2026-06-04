@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🥖 Bakery Website
+#  Bakery Website
 
 A modern website for a personal bakery showcasing fresh baked goods.
 
