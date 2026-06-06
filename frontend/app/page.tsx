@@ -1,22 +1,9 @@
-"use client";
-
 import ImageWithFallback from "next/image";
-import { Wheat, Coffee, Cake, Heart, Clock, MapPin } from "lucide-react";
+import { Coffee, Cake, Heart, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Card from "@/components/ui/card";
+import ScrollButton from "@/components/ScrollButton";
 import Link from "next/link";
-
-const smoothScrollTo = (id: string) => {
-  const element = document.getElementById(id);
-  if (!element) return;
-
-  const top = element.getBoundingClientRect().top + window.scrollY;
-
-  window.scrollTo({
-    top,
-    behavior: "smooth",
-  });
-};
 
 export default function Home() {
   return (
@@ -36,7 +23,7 @@ export default function Home() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                  Nalalie's Baked Goods
+                  Natalie's Baked Goods
                 </h1>
 
                 <p className="max-w-prose text-lg leading-relaxed text-foreground/80">
@@ -45,12 +32,13 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-wrap gap-4 pt-2">
-                  <Button size="lg" onClick={(e) => smoothScrollTo("menu")}>
+                  <ScrollButton targetId="menu" size="lg">
                     View Menu
-                  </Button>
-                  <Button size="lg" variant="outline" onClick={(e) => smoothScrollTo("about")}>
+                  </ScrollButton>
+                  <ScrollButton targetId="about" variant="outline" size="lg">
                     Our Story
-                  </Button>
+                  </ScrollButton>
+
                 </div>
               </div>
 
